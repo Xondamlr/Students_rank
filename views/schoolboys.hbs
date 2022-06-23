@@ -1,0 +1,33 @@
+<div class="container" >
+    {{#if schoolboys.length}}
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Surname</th>
+                <th>Number</th>
+                <th>Group</th>
+                <th>Month <a href="/filtermonth"><i class="fa-solid fa-magnifying-glass"></i></a></th>
+                <th>Score</th>
+               
+            </tr>
+        </thead>
+
+ 
+            {{#each schoolboys}}
+            <tr class="child">
+                <td>{{name}}</td>
+                <td>{{surname}}</td>
+                <td>{{number}}</td>
+                <td>{{group}}</td>
+                <td>{{month}}</td>
+                <td>{{score}} <a href="/schoolboy/{{id}}"><i class="fa-solid fa-plus"></i></a></td>
+
+            </tr>
+            {{/each}}
+    </table>
+    {{else}}
+    <h2>Schoolboys is empty</h2>
+    {{/if}}
+    <a href="/add">Add new schoolboy</a>
+</div>
